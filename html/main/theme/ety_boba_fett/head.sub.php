@@ -121,7 +121,7 @@ if(!defined('G5_IS_ADMIN'))
 <!-- Custom & ety -->
 <link href="<?php echo G5_THEME_URL?>/css/modern-business.css" rel="stylesheet">
 <link href="<?php echo G5_THEME_URL?>/css/ety.css" rel="stylesheet">
-<!-- 작업완료 후 min.css로 바꾸기 -->
+
 <link href="<?php echo G5_THEME_URL?>/css/ssh.css" rel="stylesheet">
 
 

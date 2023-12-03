@@ -29,7 +29,7 @@
   top: 35px;
   right: 15%;
 }
-/* 커스텀 */
+
 #top-nav {
   height: 135px;
   display: flex;
@@ -55,3 +55,53 @@
   margin: 0 1rem;
 }
 
+/* 하단메뉴 */
+#bottom-nav.navbar {
+  padding: 0 !important;
+}
+#bottom-nav .navbar-nav {
+  display: flex !important;
+  justify-content: center !important;
+}
+#bottom-nav .ssh--bottom-nav {
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+/* gnb 호버시 전체 메뉴나오게하기 */
+#bottom-nav .ssh--bottom-nav::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: whitesmoke;
+  height: 0px;
+  transition: .5s;
+}
+#bottom-nav .ssh--bottom-nav:hover::before {
+  border-top: 1px solid #333;
+  height: 150px;
+  z-index: 9;
+
+}
+#bottom-nav .ssh--bottom-nav:hover .dropdown-menu {
+  height: 130px;
+  border-top: 1px solid #333;
+}
+/* #bottom-nav .nav-item:hover .dropdown-menu {
+  height: 150px;
+} */
+#bottom-nav .dropdown-menu {
+  display: block;
+  height: 0px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  transition: .5s;
+  border: none;
+  /* top: 125%; */
+  top: 100%;
+  left: 0;
+  background-color: whitesmoke;
+}
