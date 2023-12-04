@@ -50,7 +50,7 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarResponsive" data-hover="dropdown" data-animations="fadeIn fadeIn fadeInUp fadeInRight">
 	  <div class="w-100">
-			<ul class="ssh--bottom-nav navbar-navxxx ml-autoxxx d-flex">
+			<ul class="ssh--bottom-nav navbar-nav ml-auto d-flex">
 					<?php
 					$sql = " select *
 								from {$g5['menu_table']}

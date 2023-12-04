@@ -68,7 +68,50 @@
   align-items: center;
   margin: 0;
 }
-/* gnb 호버시 전체 메뉴나오게하기 */
+
+
+/* #bottom-nav .nav-item:hover .dropdown-menu {
+  height: 150px;
+} */
+#bottom-nav .dropdown-menu {
+  display: block;
+  /* height: 0px; */
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  transition: .5s;
+  border: none;
+  /* top: 125%; */
+  top: 100%;
+  left: 0;
+  background-color: whitesmoke;
+}
+
+#bottom-nav .dropdown-menu {
+  display: block;
+  /* height: 0px; */
+  /* overflow: hidden; */
+  padding: 0;
+  margin: 0;
+  transition: .5s;
+  border: none;
+  /* top: 125%; */
+  top: 100%;
+  left: 0;
+  background-color: whitesmoke;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+/* PC 뷰 */
+@media (min-width: 992px) {
+  #bottom-nav .ssh--bottom-nav:hover .dropdown-menu {
+    height: 130px;
+    border-top: 1px solid #333;
+  }
+  /* gnb 호버시 전체 메뉴나오게하기 */
 #bottom-nav .ssh--bottom-nav::before {
   content: "";
   position: absolute;
@@ -83,25 +126,19 @@
   border-top: 1px solid #333;
   height: 150px;
   z-index: 9;
+}
 
-}
-#bottom-nav .ssh--bottom-nav:hover .dropdown-menu {
-  height: 130px;
-  border-top: 1px solid #333;
-}
-/* #bottom-nav .nav-item:hover .dropdown-menu {
-  height: 150px;
-} */
-#bottom-nav .dropdown-menu {
-  display: block;
-  height: 0px;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  transition: .5s;
-  border: none;
-  /* top: 125%; */
-  top: 100%;
-  left: 0;
-  background-color: whitesmoke;
+  #bottom-nav .dropdown-menu {
+    display: block;
+    height: 0px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    transition: .5s;
+    border: none;
+    /* top: 125%; */
+    top: 100%;
+    left: 0;
+    background-color: whitesmoke;
+  }
 }
