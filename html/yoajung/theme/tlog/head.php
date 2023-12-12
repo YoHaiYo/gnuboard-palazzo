@@ -154,45 +154,55 @@ $(function() {
 
 <!-- {{{ #wrapper -->
 <div id="wrap">
-<div style="position:relative">
-    <header id="header">
-        <div class="header-inner">
-            <div id="logo"><a href="/yoajung"><img src="<?=G5_THEME_URL?>/img/logo-color.png"></a></div>
-            <ul class="gnb">
-                <?php foreach($MENUM as $k=>$l_menu) { ?>
-                <li class="lm"> 
-                    <a href="<?=$l_menu['me_link']?>" target="_<?=$l_menu['me_target']?>"> <?=get_text($l_menu['me_name'])?></a>
-                    <?php if(is_array($l_menu['ms'])) { ?>
-                    <ul class="snb">
-                        <?php foreach($l_menu['ms'] as $kk=>$s_menu) { ?>
-                        <li class="sm"><a href="<?=$s_menu['me_link']?>" target="_<?=$s_menu['me_target']?>"> <?=get_text($s_menu['me_name'])?></a></li>
-                        <?php } ?>
-                    </ul>
-                    <?php
-                    }
-                    ?>
-                </li>
-                <?php } ?>
-                
-		    <?php if ($is_member) {  ?>
-            <?php if ($is_admin) {  ?>
-            <li class="join"><a href="<?php echo G5_ADMIN_URL ?>"><i class="xi-profile"></i> 관리자</a></li>
-            <?php }  ?>
-            <li class="login" style="border-right:1px solid #2a5eca"><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php"><i class="xi-wrench"></i> 정보수정</a></li>
-            <li class="login"><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="xi-unlock"></i> 로그아웃</a></li>
-            <?php } else {  ?>
-            <li class="join"><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="xi-user-plus-o"></i> 회원가입</a></li>
-            <li class="login"><a href="<?php echo G5_BBS_URL ?>/login.php"><i class="xi-lock"></i> 로그인</a></li>
-            <?php }  ?>
+    <div style="position:relative">
+
+            
+            <ul class="h_util">
+                <?php if ($is_member) {  ?>
+                <?php if ($is_admin) {  ?>
+                <li class="join"><a href="<?php echo G5_ADMIN_URL ?>"><i class="xi-profile"></i> 관리자</a></li>
+                <?php }  ?>
+                <li class="login" style="border-right:1px solid #2a5eca"><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php"><i class="xi-wrench"></i> 정보수정</a></li>
+                <li class="login"><a href="<?php echo G5_BBS_URL ?>/logout.php"><i class="xi-unlock"></i> 로그아웃</a></li>
+                <?php } else {  ?>
+                <li class="join"><a href="<?php echo G5_BBS_URL ?>/register.php"><i class="xi-user-plus-o"></i> 회원가입</a></li>
+                <li class="login"><a href="<?php echo G5_BBS_URL ?>/login.php"><i class="xi-lock"></i> 로그인</a></li>
+                <?php }  ?>
              </ul>
-             <button type="button" class="menu">메뉴</button>
-           </div>    
-       
-    </header> 
+        <header id="header">
+            
+            <div class="header-inner">
+                <div id="logo"><a href="/yoajung"><img src="<?=G5_THEME_URL?>/img/logo-color.png"></a></div>
 
-    
+                <ul class="gnb">
+                    <?php foreach($MENUM as $k=>$l_menu) { ?>
+                    <li class="lm"> 
+                        <a href="<?=$l_menu['me_link']?>" target="_<?=$l_menu['me_target']?>"> <?=get_text($l_menu['me_name'])?></a>
+                        <?php if(is_array($l_menu['ms'])) { ?>
 
-</div>
+                        <ul class="snb">
+                            <?php foreach($l_menu['ms'] as $kk=>$s_menu) { ?>
+                            <li class="sm"><a href="<?=$s_menu['me_link']?>" target="_<?=$s_menu['me_target']?>"> <?=get_text($s_menu['me_name'])?></a></li>
+                            <?php } ?>
+                        </ul>
+
+                        <?php
+                        }
+                        ?>
+                    </li>
+                    <?php } ?>
+                    
+                
+                </ul>
+
+                
+
+                <button type="button" class="menu">메뉴</button>
+            </div>    
+        
+        </header> 
+
+    </div>
 <script>
 $(function() {
 	$('#header button.menu').click(function(e) {
